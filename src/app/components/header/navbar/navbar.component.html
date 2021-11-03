@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+    <a mat-button routerLink="/products">Shop</a>
+    <a *ngIf="!isAuthenticated" mat-button routerLink="/sign-in">Sign in</a>
+    <a *ngIf="!isAuthenticated" mat-button routerLink="/sign-up">Sign up</a>
+    <a *ngIf="isAuthenticated" mat-button routerlink="/my-account">My account</a>
+    <button *ngIf="isAuthenticated" mat-button disableRipple (click)="logout()">Logout</button>
+  </mat-toolbar>

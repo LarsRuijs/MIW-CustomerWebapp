@@ -1,0 +1,49 @@
+<div class="container">
+    <div flex="50"></div>
+    <div flex="50" class="middle">
+        <form [formGroup]="signUpForm" (submit)="submit()">
+            <mat-card fxLayout="column" fxLayoutGap="10px" class="example-card">
+                <h1>Register an account</h1>
+
+                <h2>Credentials</h2>
+                <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" formControlName="password">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Confirm password" formControlName="confirmPassword">
+                </mat-form-field>
+
+                <h2>Personal info</h2>
+                <div fxLayout="row">
+                    <mat-form-field>
+                        <input matInput placeholder="First name" formControlName="givenName">
+                    </mat-form-field>
+
+                    <mat-form-field style="margin-left: 20px;">
+                        <input matInput placeholder="Last name" formControlName="familyName">
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row">
+                    <mat-form-field>
+                        <input matInput placeholder="Postal code" formControlName="postalCode">
+                    </mat-form-field>
+
+                    <mat-form-field style="margin-left: 20px;">
+                        <input matInput placeholder="House number" formControlName="houseNumber">
+                    </mat-form-field>
+                </div>
+
+                <button mat-raised-button color="primary" type="submit">Register</button>
+                <a routerLink="" mat-raised-button color="warn">Go back</a>
+
+            </mat-card>
+        </form>
+    </div>
+    <div flex="33"></div>
+</div>

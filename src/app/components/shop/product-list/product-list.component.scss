@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-div {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-row {
+    height: auto;
+  }
+  
+  .mat-cell {
+    padding: 15px 30px 15px 0;
+  }
+  

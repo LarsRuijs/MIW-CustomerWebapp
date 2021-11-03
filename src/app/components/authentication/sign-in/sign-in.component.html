@@ -1,0 +1,23 @@
+<div class="container">
+    <div flex="33"></div>
+    <div flex="33" class="middle">
+        <form [formGroup]="signInForm" (submit)="submit()">
+            <mat-card fxLayout="column" fxLayoutGap="10px" class="example-card">
+                <h1>Login</h1>
+
+                <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" formControlName="password">
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit">Login</button>
+                <a routerLink="" mat-raised-button color="warn">Go back</a>
+
+            </mat-card>
+        </form>
+    </div>
+    <div flex="33"></div>
+</div>
