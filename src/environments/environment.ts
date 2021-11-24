@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: ''
+  gateway: 'https://localhost:5002'
 };
 
 /*

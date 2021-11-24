@@ -13,10 +13,10 @@ import { RegisterRequest } from '../models/dto/registerRequest';
     }
   
     register(registerRequest: RegisterRequest) {
-      return this.http.post(environment.api + '/register', registerRequest);
+      return this.http.post(environment.gateway + '/register', registerRequest);
     }
   
     login(loginRequest: LoginRequest) {
-      return this.http.post(environment.api + '/login', loginRequest);
+      return this.http.post(environment.gateway + '/login', loginRequest);
     }
   }

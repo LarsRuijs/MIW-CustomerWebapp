@@ -1,14 +1,19 @@
-FROM node:latest as build
+# Stage 1
+FROM node:16-alpine as build-step
 
-WORKDIR /usr/local/app
+RUN mkdir -p /app
 
-COPY ./ /usr/local/app/
+WORKDIR /app
+
+COPY package.json /app
 
 RUN npm install
 
-RUN npm run build
+COPY . /app
 
-FROM nginx:latest
-COPY --from=build /usr/local/app/dist/sample-angular-app /usr/share/nginx/html
+RUN npm run build --prod
 
-EXPOSE 3333
+# Stage 2
+FROM nginx:1.17.1-alpine
+
+COPY --from=build-step /app/dist/MIW-CustomerWebapp /usr/share/nginx/html

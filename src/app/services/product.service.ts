@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
     }
   
     getAll() {
-        return this.http.get(environment.api + '/product');
+        return this.http.get(environment.gateway + '/product');
     }
 
   }
