@@ -84,7 +84,7 @@ jobs:
       # command below.
       # https://github.com/sigstore/cosign
       - name: Sign the published Docker image
-        if: ${{ github.event_name != 'pull_request' && !github.event.repository.private }}
+        if: ${{ github.event_name != 'pull_request' && !github.event.repository.public }}
         env:
           COSIGN_EXPERIMENTAL: "true"
         # This step uses the identity token to provision an ephemeral certificate
