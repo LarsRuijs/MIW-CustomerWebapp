@@ -15,4 +15,6 @@ import { Observable } from 'rxjs';
         return this.http.get(environment.gateway + '/product');
     }
 
+    
+
   }
